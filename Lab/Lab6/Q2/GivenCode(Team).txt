@@ -1,0 +1,54 @@
+=======================================
+Team - constructor
+=======================================
+
+		for each member:
+		{
+			String name = inFile.next();
+			char roleType = _________________; //Read a string of one character and get that character: inFile.next().charAt(0);
+			
+			Role r;		
+			if (roleType=='l')	r = ________; //create a RLeader role object: new RLeader();
+			else /*roleType=='n'*/	r = __________; //create a RNormalMember role object: new RNormalMember();
+			
+			allMembers[i]= _____________; // Create a member object: new ____________;
+		}
+		
+=======================================
+Team - printTeamContactMessages
+=======================================
+	public void printTeamContactMessages()
+	{
+		for (int i=0;i<allMembers.length;i++)
+		{
+			String name_i=allMembers[i].getName(); //e.g. "Helena"
+			System.out.print("Dear " + name_i + ",  ");
+			String teammates = _________________; // allMembers[i].getRole().genTeamContactMsg(this);
+			System.out.println(_______________); // teammates
+		}
+	}	
+	
+=======================================
+Team - getLeader
+=======================================	
+	public Member getLeader()
+	{
+		for (int i=0;i<allMembers.length;i++)
+			if (__________________) //checking:  allMembers[i].getRole() instanceof RLeader
+				return allMembers[i];
+		return null; //not found
+	}	
+	
+=======================================
+Team - getStringOfNormalMembers
+=======================================	
+	public String getStringOfNormalMembers()
+	{
+		String result="";
+		for (int i=0;i<allMembers.length;i++)
+			if (________________________________________________________)
+				result+= allMembers[i].getNameAndRole()+" ";
+		result=result.trim(); //.trim() is for removing leading and trailing spaces 
+		return result;
+	}
+	

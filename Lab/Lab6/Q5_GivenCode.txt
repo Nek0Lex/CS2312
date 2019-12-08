@@ -1,0 +1,2 @@
+ArrayList<Team> teams;
+teams = new ...; //See Lab05 page 2.
