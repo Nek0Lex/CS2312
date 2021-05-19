@@ -1,1 +1,1 @@
-# CS2312
+# CS2312 Problem Solving and Programming
